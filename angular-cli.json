@@ -8,9 +8,9 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+  "assets",
+  "favicon.ico"
+],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -22,8 +22,8 @@
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "../node_modules/jquery/dist/jquery.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
       "environments": {
         "source": "environments/environment.ts",
@@ -53,7 +53,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

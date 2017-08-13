@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ReservationComponent } from '../reservation/reservation.component';
+import { VenueChoiceComponent } from '../venue-choice/venue-choice.component';
+import { AboutComponent } from '../about/about.component';
 
 const routes:Routes = [
   {
     path: '',
     children: [
-       { path: 'reservation', component: ReservationComponent }
+       { path: 'reservation', component: ReservationComponent },
+       { path: 'reservation/venue-choice', component: VenueChoiceComponent },
+       { path: 'about', component: AboutComponent }
     ]
   },
   { path: '**', redirectTo: '' }

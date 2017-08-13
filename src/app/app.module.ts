@@ -8,12 +8,18 @@ import {RoutingModule} from './routing/routing.module';
 import { AppComponent } from './app.component';
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { AboutComponent } from './about/about.component';
+import { VenueChoiceComponent } from './venue-choice/venue-choice.component';
+import { VenueTileComponent } from './venue-tile/venue-tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavbarComponent,
-    ReservationComponent
+    ReservationComponent,
+    AboutComponent,
+    VenueChoiceComponent,
+    VenueTileComponent
   ],
   imports: [
     BrowserModule,
