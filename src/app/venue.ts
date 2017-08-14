@@ -3,4 +3,5 @@ export class Venue {
   imageUrl: string;
   description: string;
   websiteUrl: string;
+  id: number;
 }
