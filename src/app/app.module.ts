@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { VenueChoiceComponent } from './venue-choice/venue-choice.component';
 import { VenueTileComponent } from './venue-tile/venue-tile.component';
 
+import { ReservationService } from './reservation.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { VenueTileComponent } from './venue-tile/venue-tile.component';
     ReservationComponent,
     AboutComponent,
     VenueChoiceComponent,
-    VenueTileComponent
+    VenueTileComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { VenueTileComponent } from './venue-tile/venue-tile.component';
     HttpModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [ReservationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

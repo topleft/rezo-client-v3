@@ -3,7 +3,7 @@ import { Venue } from './venue'
 import { VENUES } from './mock-venues';
 
 @Injectable()
-export class VenueService {
+export class ReservationService {
   selectedVenue: Venue;
 
   constructor() { }

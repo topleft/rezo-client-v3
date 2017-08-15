@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Venue } from '../venue';
-import { VenueService } from '../venue.service';
 
 @Component({
   selector: 'venue-tile',
@@ -12,7 +11,7 @@ export class VenueTileComponent implements OnInit {
   @Input() venue: Venue;
   @Input() isSelected: boolean;
 
-  constructor(private venueService: VenueService) { }
+  constructor() { }
 
   ngOnInit() {
   }
