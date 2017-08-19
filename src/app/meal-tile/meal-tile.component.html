@@ -1,0 +1,19 @@
+<div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail clickable" [class.selected]="isSelected">
+      <img src="{{meal.imageUrl}}" alt="meal image">
+      <div class="caption">
+        <h3>{{meal.name}}</h3>
+        <p>{{meal.description}}</p>
+        <div *ngIf="isSelected" class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="quantity">How many?</label>
+              <input (click)="$event.stopPropagation()" type="text" name="quantity" class="form-control" placeholder="quantity">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

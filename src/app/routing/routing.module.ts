@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ReservationComponent } from '../reservation/reservation.component';
 import { VenueChoiceComponent } from '../venue-choice/venue-choice.component';
+import { MealChoiceComponent } from '../meal-choice/meal-choice.component';
 import { AboutComponent } from '../about/about.component';
 
 const routes:Routes = [
@@ -12,6 +13,7 @@ const routes:Routes = [
     children: [
        { path: 'reservation', component: ReservationComponent },
        { path: 'reservation/venue-choice', component: VenueChoiceComponent },
+       { path: 'reservation/meal-choice', component: MealChoiceComponent },
        { path: 'about', component: AboutComponent }
     ]
   },

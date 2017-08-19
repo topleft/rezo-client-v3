@@ -1,8 +1,8 @@
 <div *ngFor="let venue of venues">
   <venue-tile
     [venue]="venue"
-    [isSelected]="venue.id === selectedVenue?.id"
-    (click)="setSelected(venue)"
+    [isSelected]="isSelected(venue)"
+    (click)="updateSelected(venue)"
   >
   </venue-tile>
 </div>

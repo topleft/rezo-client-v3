@@ -13,6 +13,8 @@ import { VenueChoiceComponent } from './venue-choice/venue-choice.component';
 import { VenueTileComponent } from './venue-tile/venue-tile.component';
 
 import { ReservationService } from './reservation.service';
+import { MealChoiceComponent } from './meal-choice/meal-choice.component';
+import { MealTileComponent } from './meal-tile/meal-tile.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ReservationService } from './reservation.service';
     AboutComponent,
     VenueChoiceComponent,
     VenueTileComponent,
+    MealChoiceComponent,
+    MealTileComponent,
   ],
   imports: [
     BrowserModule,
