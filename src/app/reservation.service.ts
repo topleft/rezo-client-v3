@@ -24,7 +24,7 @@ export class ReservationService {
   }
 
   updateSelectedVenue(venue?: Venue): void {
-    this.selectedVenue = (venue === this.selectedVenue) ? null : venue; 
+    this.selectedVenue = (venue === this.selectedVenue) ? null : venue;
   }
 
   /////////////////////
@@ -41,11 +41,13 @@ export class ReservationService {
 
   updateSelectedMeals(meal?: Meal): void {
     const mealIndex = this.selectedMeals.indexOf(meal);
+    let selectedMeals = this.selectedMeals.slice()
     if (mealIndex === -1) {
-      this.selectedMeals.push(meal);
+      selectedMeals.push(meal);
     } else {
-      this.selectedMeals.splice(mealIndex, 1);
+      selectedMeals.splice(mealIndex, 1);
     }
+    this.selectedMeals = selectedMeals;
   }
 
 }

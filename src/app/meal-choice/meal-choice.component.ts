@@ -13,33 +13,34 @@ import { Meal } from '../meal';
 export class MealChoiceComponent implements OnInit {
 
   meals: Meal[];
-  selectedMeals: Meal[];
+  totalMeals: number = 0;
 
   constructor(private reservationService: ReservationService) { }
 
   ngOnInit() {
     this.getMeals();
-    this.getSelectedMeals();
   }
 
   getMeals(): void {
     this.reservationService.getMeals()
-    .then((result) => {console.log(result); this.meals = result;});
-  }
-
-  getSelectedMeals(): void {
-    this.selectedMeals = this.reservationService.getSelectedMeals();
+    .then((result) => this.meals = result)
+    .catch(console.log); // update with alert
   }
 
   updateSelectedMeals(meal: Meal): void {
-    const selectedMeals = this.reservationService.updateSelectedMeals(meal);
-    this.selectedMeals = this.reservationService.getSelectedMeals();
+    this.reservationService.updateSelectedMeals(meal);
+    this.getTotalMeals()
   }
 
   isSelected(meal: Meal): boolean {
-    return this.selectedMeals.indexOf(meal) !== -1;
+    const selectedMeals = this.reservationService.getSelectedMeals()
+    return selectedMeals.indexOf(meal) !== -1;
   }
 
-
+  getTotalMeals(): void {
+    this.totalMeals = 0;
+    const selectedMeals = this.reservationService.getSelectedMeals()
+    selectedMeals.forEach(x => this.totalMeals += Number(x.quantity))
+  }
 
 }

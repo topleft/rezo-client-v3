@@ -1,8 +1,11 @@
+<div class="pull-right"><p>Total Meals: {{totalMeals}}<p></div>
 <div *ngFor="let meal of meals">
   <meal-tile
     [meal]="meal"
     [isSelected]="isSelected(meal)"
     (click)="updateSelectedMeals(meal)"
+    (keyup)="getTotalMeals()"
+    type="number"
   >
   </meal-tile>
 </div>

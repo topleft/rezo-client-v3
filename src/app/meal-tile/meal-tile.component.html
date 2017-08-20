@@ -9,7 +9,7 @@
           <div class="col-sm-4">
             <div class="form-group">
               <label for="quantity">How many?</label>
-              <input (click)="$event.stopPropagation()" type="text" name="quantity" class="form-control" placeholder="quantity">
+              <input [(ngModel)]="meal.quantity" (click)="$event.stopPropagation()" type="text" name="quantity" class="form-control" placeholder="quantity">
             </div>
           </div>
         </div>

@@ -37,4 +37,5 @@ export class VenueChoiceComponent implements OnInit {
     const selectedVenue = this.getSelected();
     return (selectedVenue && selectedVenue.id === venue.id) ? true : false;
   }
+
 }
