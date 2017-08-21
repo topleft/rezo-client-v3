@@ -1,0 +1,17 @@
+{{diagnostic}}
+<div class="col-sm-6">
+  <form #eventInfoForm="ngForm">
+    <div class="form-group">
+      <label for="date">What Date?</label>
+      <input [(ngModel)]="reservation.date" name="date" type="date" class="form-control" #date>
+    </div>
+    <div class="form-group">
+      <label for="time">What Time?</label>
+      <input [(ngModel)]="reservation.time" name="time" type="time" class="form-control" #time>
+    </div>
+    <div class="form-group">
+      <label for="totalGuests">How Many Guests?</label>
+      <input [(ngModel)]="reservation.totalGuests" name="totalGuests" type="number" class="form-control" #totalGuests>
+    </div>
+  </form>
+</div>

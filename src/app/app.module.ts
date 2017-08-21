@@ -15,6 +15,7 @@ import { VenueTileComponent } from './venue-tile/venue-tile.component';
 import { ReservationService } from './reservation.service';
 import { MealChoiceComponent } from './meal-choice/meal-choice.component';
 import { MealTileComponent } from './meal-tile/meal-tile.component';
+import { EventInfoFormComponent } from './event-info-form/event-info-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MealTileComponent } from './meal-tile/meal-tile.component';
     VenueTileComponent,
     MealChoiceComponent,
     MealTileComponent,
+    EventInfoFormComponent,
   ],
   imports: [
     BrowserModule,
