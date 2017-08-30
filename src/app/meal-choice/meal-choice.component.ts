@@ -29,7 +29,7 @@ export class MealChoiceComponent implements OnInit {
 
   updateSelectedMeals(meal: Meal): void {
     this.reservationService.updateSelectedMeals(meal);
-    this.getTotalMeals()
+    this.getTotalMeals() // feels like a hack, how to make totalMeals reactive?
   }
 
   isSelected(meal: Meal): boolean {
